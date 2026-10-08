@@ -1,27 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Echoes of Ancestors</title>
-         <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <h1>Discover your vibe, And The Soundtrack your Soul </h1>
-        <p>This is what the Question to your Identity app is capable of:
-            <ol>
-                <li> Identify your unique style and preferences</li>
-                <li> By taking a short questionaire it will determine what your personalized African American Figure is and a playlist to go alongside </li>
-                <li> Discover new music that matches your taste</li>
-            </ol>
-        </p>
+<head>
+    <meta charset="UTF-8">
+    <title>Echoes of Ancestors</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Discover your vibe, And The Soundtrack your Soul</h1>
+    <p>This is what the Question to your Identity app is capable of:
+        <ol>
+            <li> Identify your unique style and preferences</li>
+            <li> By taking a short questionnaire it will determine what your personalized African American Figure is and a playlist</li>
+            <li> Discover new music that matches your taste</li>
+        </ol>
+    </p>
 
+    <!-- Side-by-side flex container for your main info sections -->
+    <div class="flex-container">
+        <section>
+            <h2>What is the Purpose of Creating this?</h2>
+            <p>The reason why I decided to create this project is to show representation of the black community by providing a questionnaire to...</p>
+        </section>
+        
+        <section>
+            <h2>Why a Music based App?</h2>
+            <p>I chose a music based app because I believe that music is a key piece to someones heart. I think that music is a way to figure out your identity and what you love and what you don't love in your life.</p>
+        </section>
+    </div>
 
-<section>
-    <h2>What is the Purpose of Creating this?</h2>
-    <p>The reason why I decided to create this project is to show representation of the black community by providing a questionaire to others to identity their characteristics about themselves. Whatever person they get via the questionaire they will get a playlist specific to them that will help them bond with their specific historical African American figure.</p>
+    
+    <section id="quiz-section">
+        <h2>Find Your Historical Figure Match</h2>
+        
+        <div id="cultural-quiz">
+        
+            <div class="question-group">
+                <h3>1. When facing a major challenge, what is your approach?</h3>
+                <label><input type="radio" name="q1" value="leader"> Organize, mobilize, and stand firm for what's right.</label>
+                <label><input type="radio" name="q1" value="pioneer"> Break barriers and prove them wrong through action.</label>
+                <label><input type="radio" name="q1" value="intellectual"> Educate, write, and build intellectual power.</label>
+            </div>
+
+   
+            <div class="question-group">
+                <h3>2. What kind of music helps you lock in and focus?</h3>
+                <label><input type="radio" name="q2" value="soul"> Soul, jazz, and conscious lyrics.</label>
+                <label><input type="radio" name="q2" value="high-energy"> High-energy rhythms and driving beats.</label>
+                <label><input type="radio" name="q2" value="timeless"> Timeless compositions and storytelling tracks.</label>
+            </div>
+
+        
+            <div class="question-group">
+                <h3>3. When your life is finished what legacy do you want to leave?</h3>
+                <label><input type="radio" name="q3" value="difference"> One where you left a huge difference on the world</label>
+                <label><input type="radio" name="q3" value="remember"> One where people forget about you but when they talk about you they instantly remember</label>
+                <label><input type="radio" name="q3" value="nothing"> One where you've done nothing at all</label>
+            </div>
+
+          
+            <div class="question-group">
+                <h3>4. Which type are you?</h3>
+                <label><input type="radio" name="q4" value="athlete"> Athlete</label>
+                <label><input type="radio" name="q4" value="dreamer"> Dreamer</label>
+                <label><input type="radio" name="q4" value="writer"> Writer</label>
+                <label><input type="radio" name="q4" value="artist"> Artist</label>
+            </div>
+
+           
+            <div class="question-group">
+                <h3>5. Which quality best describes you?</h3>
+                <label><input type="radio" name="q5" value="resilient"> Resilient</label>
+                <label><input type="radio" name="q5" value="innovative"> Innovative</label>
+                <label><input type="radio" name="q5" value="empathetic"> Empathetic</label>
+                <label><input type="radio" name="q5" value="ambitious"> Ambitious</label>
+            </div>
+
+            <button type="button" onclick="calculateMatch()">Get My Match</button>
+        </div>
+
+        <div id="match-result" style="display: none;"></div>
     </section>
-    <section>
-        <h2>Why a Music based App?</h2>
-        <p>I chose a music based app because I believe that music is a key piece to someones heart. I think that music is a way to figure out your identity and what you love and what you don't love in your life.</p>
-    </section>
-    <a href="W.D.P.%20Page2.html">Click here to go to Page 2</a>
-   </html>
+
+    <a href="W.D.P.%20Page2.html">Page 2</a>
+
+    <script>
+    function calculateMatch() {
+        const q1 = document.querySelector('input[name="q1"]:checked');
+        const q2 = document.querySelector('input[name="q2"]:checked');
+        const resultDiv = document.getElementById("match-result");
+
+        if (!q1 || !q2) {
+            alert("Please answer all questions before submitting!");
+            return;
+        }
+
+        let figure = "";
+        let description = "";
+        let playlist = "";
+
+        if (q1.value === "leader") {
+            figure = "Claudette Colvin & Malcolm X";
+            description = "You share a bold, unyielding dedication to justice and standing your ground when it matters most.";
+            playlist = "Soundtrack: Voices of Resilience & Resistance";
+        } else if (q1.value === "pioneer") {
+            figure = "Bessie Coleman";
+            description = "You are a trailblazer who refuses to let boundaries stop you from reaching new heights.";
+            playlist = "Soundtrack: Limitless Skies & Ambition";
+        } else {
+            figure = "W.E.B. DuBois";
+            description = "You value deep intellect, historical truth, and using knowledge to uplift the community.";
+            playlist = "Soundtrack: Renaissance Mind & Soul";
+        }
+
+        resultDiv.style.display = "block";
+        resultDiv.innerHTML = `
+            <h3>Your Match: ${figure}</h3>
+            <p><strong>Vibe Check:</strong> ${description}</p>
+            <p><strong>Curated Playlist:</strong> ${playlist}</p>
+        `;
+    }
+    </script>
+</body>
+</html>

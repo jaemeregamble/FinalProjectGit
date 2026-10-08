@@ -1,8 +1,131 @@
-body{
-    background-color: #f0f0f0;
+body {
+    background-color: #fcfaf5;
+    font-family: 'Aptos', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1a1a1a;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
-li{
-    font-family: Aptos, sans-serif;
-    font-size: 28px;
-    color:red
+
+h1 {
+    color: #111111;
+    font-size: 2.2rem;
+    border-bottom: 3px solid #b30000; /* Pan-African Red */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #111111;
+    margin-top: 30px;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+ol, ul {
+    background-color: #ffffff;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-top: 3px solid #1b7a3e; /* Pan-African Green accent */
+}
+
+li {
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+}
+
+section {
+    background-color: #ffffff;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border-left: 4px solid #1b7a3e; /* Pan-African Green */
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.flex-container section {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+#quiz-section {
+    background-color: #ffffff;
+    padding: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border-left: 4px solid #b30000; /* Pan-African Red */
+}
+
+.question-group {
+    background-color: #f4f6f3; /* Slight green-tinted neutral grey */
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border-left: 4px solid #b30000; /* Pan-African Red */
+}
+
+.question-group h3 {
+    font-size: 1.1rem;
+    color: #111111;
+    margin-bottom: 10px;
+}
+
+#cultural-quiz label {
+    display: block;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#cultural-quiz button {
+    margin-top: 20px; 
+    padding: 10px 20px; 
+    font-size: 1rem;
+    background-color: #111111; /* Deep Black */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#cultural-quiz button:hover {
+    background-color: #1b7a3e; /* Shifts to Pan-African Green on hover */
+}
+
+#match-result {
+    margin-top: 20px;
+    background-color: #f4f6f3;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #1b7a3e; /* Pan-African Green */
+}
+
+#match-result h3 {
+    color: #111111;
+}
+
+a {
+    color: #b30000; /* Pan-African Red */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #1b7a3e; /* Shifts to Green on hover */
 }
