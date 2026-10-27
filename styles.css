@@ -1,7 +1,7 @@
 body {
-    background-color: #fcfaf5;
+    background-color: #121212; 
     font-family: 'Aptos', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #1a1a1a;
+    color: #e0e0e0; 
     line-height: 1.6;
     max-width: 900px;
     margin: 40px auto;
@@ -9,43 +9,45 @@ body {
 }
 
 h1 {
-    color: #111111;
+    color: #ffffff;
     font-size: 2.2rem;
-    border-bottom: 3px solid #b30000; /* Pan-African Red */
+    border-bottom: 3px solid #e63946; 
     padding-bottom: 10px;
     margin-bottom: 20px;
 }
 
 h2 {
-    color: #111111;
+    color: #ffffff;
     margin-top: 30px;
 }
 
 p {
     font-size: 1.1rem;
     margin-bottom: 15px;
+    color: #cccccc;
 }
 
 ol, ul {
-    background-color: #ffffff;
+    background-color: #1e1e1e;
     padding: 20px 40px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    border-top: 3px solid #1b7a3e; /* Pan-African Green accent */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    border-top: 3px solid #2a9d8f; 
 }
 
 li {
     font-size: 1.05rem;
     margin-bottom: 8px;
+    color: #dddddd;
 }
 
 section {
-    background-color: #ffffff;
+    background-color: #1e1e1e;
     padding: 25px;
     margin-bottom: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    border-left: 4px solid #1b7a3e; /* Pan-African Green */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+    border-left: 4px solid #2a9d8f; 
 }
 
 .flex-container {
@@ -61,26 +63,26 @@ section {
 }
 
 #quiz-section {
-    background-color: #ffffff;
+    background-color: #1e1e1e;
     padding: 25px;
     margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    border-left: 4px solid #b30000; /* Pan-African Red */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+    border-left: 4px solid #e63946; 
 }
 
 .question-group {
-    background-color: #f4f6f3; /* Slight green-tinted neutral grey */
+    background-color: #252525; 
     padding: 15px;
     margin-bottom: 15px;
     border-radius: 6px;
-    border-left: 4px solid #b30000; /* Pan-African Red */
+    border-left: 4px solid #e63946; 
 }
 
 .question-group h3 {
     font-size: 1.1rem;
-    color: #111111;
+    color: #ffffff;
     margin-bottom: 10px;
 }
 
@@ -89,43 +91,49 @@ section {
     margin-bottom: 8px;
     cursor: pointer;
     font-size: 1rem;
+    color: #cccccc;
+}
+
+#cultural-quiz label:hover {
+    color: #ffffff;
 }
 
 #cultural-quiz button {
-    margin-top: 20px; 
-    padding: 10px 20px; 
+    margin-top: 20px;
+    padding: 10px 20px;
     font-size: 1rem;
-    background-color: #111111; /* Deep Black */
+    background-color: #e63946; 
     color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.2s;
+    font-weight: bold;
 }
 
 #cultural-quiz button:hover {
-    background-color: #1b7a3e; /* Shifts to Pan-African Green on hover */
+    background-color: #2a9d8f; 
 }
 
 #match-result {
     margin-top: 20px;
-    background-color: #f4f6f3;
+    background-color: #252525;
     padding: 20px;
     border-radius: 8px;
-    border-left: 4px solid #1b7a3e; /* Pan-African Green */
+    border-left: 4px solid #2a9d8f;
 }
 
 #match-result h3 {
-    color: #111111;
+    color: #ffffff;
 }
 
 a {
-    color: #b30000; /* Pan-African Red */
+    color: #e63946; 
     text-decoration: none;
     font-weight: bold;
 }
 
 a:hover {
     text-decoration: underline;
-    color: #1b7a3e; /* Shifts to Green on hover */
+    color: #2a9d8f; 
 }
