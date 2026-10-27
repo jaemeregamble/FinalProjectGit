@@ -29,7 +29,7 @@
     </div>
 
     
-    <section id="quiz-section">
+   <section id="quiz-section">
         <h2>Find Your Historical Figure Match</h2>
         
         <div id="cultural-quiz">
@@ -41,38 +41,69 @@
                 <label><input type="radio" name="q1" value="intellectual"> Educate, write, and build intellectual power.</label>
             </div>
 
-   
             <div class="question-group">
-                <h3>2. What kind of music helps you lock in and focus?</h3>
+                <h3>2. What kind of music helps you focus?</h3>
                 <label><input type="radio" name="q2" value="soul"> Soul, jazz, and conscious lyrics.</label>
                 <label><input type="radio" name="q2" value="high-energy"> High-energy rhythms and driving beats.</label>
                 <label><input type="radio" name="q2" value="timeless"> Timeless compositions and storytelling tracks.</label>
             </div>
 
-        
             <div class="question-group">
-                <h3>3. When your life is finished what legacy do you want to leave?</h3>
+                <h3>3. What legacy would you want to leave?</h3>
                 <label><input type="radio" name="q3" value="difference"> One where you left a huge difference on the world</label>
                 <label><input type="radio" name="q3" value="remember"> One where people forget about you but when they talk about you they instantly remember</label>
                 <label><input type="radio" name="q3" value="nothing"> One where you've done nothing at all</label>
             </div>
 
-          
             <div class="question-group">
-                <h3>4. Which type are you?</h3>
+                <h3>4. Which type of person are you?</h3>
                 <label><input type="radio" name="q4" value="athlete"> Athlete</label>
                 <label><input type="radio" name="q4" value="dreamer"> Dreamer</label>
                 <label><input type="radio" name="q4" value="writer"> Writer</label>
                 <label><input type="radio" name="q4" value="artist"> Artist</label>
             </div>
 
-           
             <div class="question-group">
                 <h3>5. Which quality best describes you?</h3>
                 <label><input type="radio" name="q5" value="resilient"> Resilient</label>
                 <label><input type="radio" name="q5" value="innovative"> Innovative</label>
                 <label><input type="radio" name="q5" value="empathetic"> Empathetic</label>
                 <label><input type="radio" name="q5" value="ambitious"> Ambitious</label>
+            </div>
+
+            <div class="question-group">
+                <h3>6. What is your preferred field for making an impact?</h3>
+                <label><input type="radio" name="q6" value="stem"> Science, Technology, Engineering, Math (STEM)</label>
+                <label><input type="radio" name="q6" value="arts"> Literature, Theater, or The Arts</label>
+                <label><input type="radio" name="q6" value="activism"> Civil Rights and Activism</label>
+            </div>
+
+            <div class="question-group">
+                <h3>7. How do you process your thoughts and emotions?</h3>
+                <label><input type="radio" name="q7" value="poetry"> Through writing poetry</label>
+                <label><input type="radio" name="q7" value="speech"> Through public speaking</label>
+                <label><input type="radio" name="q7" value="logic"> Through solving complex problems and situations</label>
+            </div>
+
+            <div class="question-group">
+                <h3>8. Based on how creative you are what is your home?</h3>
+                <label><input type="radio" name="q8" value="stage"> Under the bright lights of a stage or theater</label>
+                <label><input type="radio" name="q8" value="cosmos"> Looking up at the stars and exploring the unknown</label>
+                <label><input type="radio" name="q8" value="library"> Surrounded by books, history archives, and quiet focus</label>
+            </div>
+
+            <div class="question-group">
+                <h3>9. What is your opinion on overcoming challenges?</h3>
+                <label><input type="radio" name="q9" value="dismantle"> Confront it head-on with courage</label>
+                <label><input type="radio" name="q9" value="excel"> Outwork everyone with critical thinking and hard work</label>
+                <label><input type="radio" name="q9" value="story"> Document the truth so powerfully that the world cannot look away</label>
+            </div>
+
+            <div class="question-group">
+                <h3>10. Which phrase resonates most deeply with your spirit?</h3>
+                <label><input type="radio" name="q10" value="dream"> "I have a dream..."</label>
+                <label><input type="radio" name="q10" value="bird"> "I know why the caged bird sings..."</label>
+                <label><input type="radio" name="q10" value="sky"> "The stars don't look bigger, but they look brighter."</label>
             </div>
 
             <button type="button" onclick="calculateMatch()">Get My Match</button>
@@ -83,42 +114,6 @@
 
     <a href="W.D.P.%20Page2.html">Page 2</a>
 
-    <script>
-    function calculateMatch() {
-        const q1 = document.querySelector('input[name="q1"]:checked');
-        const q2 = document.querySelector('input[name="q2"]:checked');
-        const resultDiv = document.getElementById("match-result");
-
-        if (!q1 || !q2) {
-            alert("Please answer all questions before submitting!");
-            return;
-        }
-
-        let figure = "";
-        let description = "";
-        let playlist = "";
-
-        if (q1.value === "leader") {
-            figure = "Claudette Colvin & Malcolm X";
-            description = "You share a bold, unyielding dedication to justice and standing your ground when it matters most.";
-            playlist = "Soundtrack: Voices of Resilience & Resistance";
-        } else if (q1.value === "pioneer") {
-            figure = "Bessie Coleman";
-            description = "You are a trailblazer who refuses to let boundaries stop you from reaching new heights.";
-            playlist = "Soundtrack: Limitless Skies & Ambition";
-        } else {
-            figure = "W.E.B. DuBois";
-            description = "You value deep intellect, historical truth, and using knowledge to uplift the community.";
-            playlist = "Soundtrack: Renaissance Mind & Soul";
-        }
-
-        resultDiv.style.display = "block";
-        resultDiv.innerHTML = `
-            <h3>Your Match: ${figure}</h3>
-            <p><strong>Vibe Check:</strong> ${description}</p>
-            <p><strong>Curated Playlist:</strong> ${playlist}</p>
-        `;
-    }
-    </script>
+<script src="extra.js"></script>
 </body>
 </html>
